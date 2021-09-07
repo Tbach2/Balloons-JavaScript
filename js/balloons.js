@@ -36,15 +36,16 @@ $(function () {
             $('#blue').prop('checked', true);
             $('#green').prop('checked', true);
         }
-    });
-    $('#selectAll').on('click', function () {
         if ($(this).prop('checked') == false) {
             $('#red').prop('checked', false);
             $('#blue').prop('checked', false);
             $('#green').prop('checked', false);
         }
+    });
+
+        
     })
-});
+
 // Randomize the attention seeker in balloons.html. Choose a random animate.css attention seeker and apply when the page loads using JavaScript.
 var animations = ["animate__animated animate__heartBeat", "animate__animated animate__bounce", "animate__animated animate__rubberBand"]
 var animationValues = animations[Math.floor(Math.random() * animations.length)];
