@@ -30,17 +30,8 @@ $(function () {
         }
     });
     // Add ability to check / uncheck all balloons with a single click (using a button, checkbox, link, etc…)
-    $('#selectAll').on('click', function () {
-        if ($(this).on(':checked')) {
-            $('#red').prop('checked', true);
-            $('#blue').prop('checked', true);
-            $('#green').prop('checked', true);
-        }
-        if ($(this).prop('checked') == false) {
-            $('#red').prop('checked', false);
-            $('#blue').prop('checked', false);
-            $('#green').prop('checked', false);
-        }
+    $('#selectAll').on('change', function () {
+        $(this).is(':checked') ? $('.form-check-input').prop('checked', true) : $('.form-check-input').prop('checked', false) ;
     });
 
         
